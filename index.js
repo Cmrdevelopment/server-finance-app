@@ -11,6 +11,7 @@ import transactionRoutes from "./routes/transaction.js";
 import KPI from "./models/KPI.js";
 import Transaction from "./models/Transaction.js";
 import { kpis, products, transactions } from "./data/data.js";
+import Product from "./models/Product.js";
 
 /* CONFIGURATIONS */
 dotenv.config();
@@ -40,7 +41,7 @@ mongoose
         app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
         /* ADD DATA ONE TIME ONLY OR AS NEEDED */
-    // await mongoose.connection.db.dropDatabase();
+    //await mongoose.connection.db.dropDatabase();
     // KPI.insertMany(kpis);
     // Product.insertMany(products);
     // Transaction.insertMany(transactions);
